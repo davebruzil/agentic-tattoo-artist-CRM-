@@ -1,0 +1,321 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 16px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  position: relative;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 24px 0 24px;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+}
+
+.modal-header h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+  flex: 1;
+}
+
+.status-container {
+  margin: 0 16px;
+}
+
+.status-badge-modal {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  text-transform: capitalize;
+}
+
+.close-btn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  transition: background-color 0.2s ease;
+}
+
+.close-btn:hover {
+  background-color: #e9ecef;
+}
+
+.modal-body {
+  padding: 0 24px 24px 24px;
+}
+
+.appointment-section {
+  margin-bottom: 24px;
+  padding: 16px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+}
+
+.appointment-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  color: #333;
+}
+
+.calendar-icon {
+  font-size: 16px;
+}
+
+.section {
+  margin-bottom: 32px;
+}
+
+.section h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 16px 0;
+}
+
+.contact-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 0;
+}
+
+.contact-icon {
+  font-size: 16px;
+  margin-top: 2px;
+  opacity: 0.7;
+}
+
+.contact-label {
+  font-size: 12px;
+  color: #666;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.contact-value {
+  font-size: 16px;
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+.whatsapp-link {
+  color: #25d366;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.whatsapp-link:hover {
+  color: #1da851;
+  text-decoration: underline;
+}
+
+.tattoo-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  padding: 16px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+}
+
+.editable-section {
+  display: grid;
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.editable-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  transition: border-color 0.2s ease;
+}
+
+.editable-item:focus-within {
+  border-color: #007AFF;
+}
+
+.status-icon,
+.location-icon,
+.size-icon,
+.budget-icon {
+  font-size: 16px;
+  opacity: 0.7;
+}
+
+.status-icon {
+  color: #9b59b6;
+}
+
+.location-icon {
+  color: #e74c3c;
+}
+
+.size-icon {
+  color: #3498db;
+}
+
+.budget-icon {
+  color: #27ae60;
+}
+
+.editable-content {
+  flex: 1;
+}
+
+.editable-label {
+  font-size: 12px;
+  color: #666;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.editable-input,
+.editable-select {
+  width: 100%;
+  padding: 8px 0;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.editable-input:focus,
+.editable-select:focus {
+  outline: none;
+}
+
+.status-select {
+  color: #9b59b6;
+  cursor: pointer;
+}
+
+.placement-input {
+  color: #e74c3c;
+}
+
+.size-select {
+  color: #3498db;
+  cursor: pointer;
+}
+
+.budget-input {
+  color: #27ae60;
+}
+
+@media (max-width: 768px) {
+  .modal-overlay {
+    padding: 16px;
+  }
+  
+  .modal-content {
+    max-height: 95vh;
+  }
+  
+  .modal-header {
+    padding: 20px 20px 0 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .modal-header h2 {
+    font-size: 20px;
+  }
+  
+  .status-container {
+    margin: 0;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+  
+  .modal-body {
+    padding: 0 20px 20px 20px;
+  }
+  
+  .contact-grid {
+    gap: 12px;
+  }
+  
+  .editable-section {
+    gap: 16px;
+  }
+}
+
+.modal-footer {
+  border-top: 1px solid #f0f0f0;
+  padding: 20px 24px;
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.reject-client-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.reject-client-btn:hover {
+  background-color: #c82333;
+}
